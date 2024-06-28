@@ -1,0 +1,23 @@
+@import "fonts";
+@import "main";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overscroll-behavior: none;
+}
+
+$browser-context: 16;
+
+@for $i from 1 through 60 {
+    @media (min-width: 1800px + ($i * 100)) {
+        html {
+            font-size: #{$browser-context + $i}px;
+        }
+    }
+}
